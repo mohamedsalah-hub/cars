@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index5.css">
+    <title> Sign Up</title>
+</head>
+<body>
+  <div class="header">
+    <div ><img id="lo-pro" src="images.png" alt="logo"></div>
+<h2>Volkeswagen Cars</h2>
+<div class="dropdown">
+<button class="dropbtn" ><div></div><div></div><div></div></button>
+<div class="dropdown-content">
+<a href="index.html"> Home</a>
+<a href="index2.html" >Models</a>
+<a href="pro.html">Cars prices</a>
+<a href="index1.html">About</a>
+<a href="index5.html"class="active">Sign Up</a>
+</div>
+</div>
+</div>
+<hr>
+    <div class="container">
+      <form id="form" onsubmit="return validate_pass()" action="index.html">
+          <div class="row">
+            <div class="col">
+              <input type="text"  name="firstname" placeholder="First name..">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input type="text"  name="lastname" placeholder="Your last name..">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input type="email"  name="firstname" placeholder="Your E-mail..">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input type="password" id="psw" title="The password must start with upper case character include 8 characters only and one digit at least and one special character" pattern="^(?=[A-Z]{1})(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#&*_-]).{8}$" name="psw" placeholder="password..">
+            </div>
+          </div>
+
+          
+        
+        
+        <div class="row">
+            <div class="col">
+        <input type="date" name="birthday">
+    </div>
+</div>
+
+        <div class="row">
+            
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="display: inline-block;">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="display: inline-block;">Female</label>
+                
+            </div>
+        
+
+          
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+      <script>
+        function validate_pass()
+ {
+     let x=document.forms['form']['psw'].value;
+      let pat=/^(?=[A-Z]{1})(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#&*_-]).{8}$/;
+  if(pat.test(x))
+     {
+          alart("submit pass");
+        return true;
+     }
+     else
+     {
+          return false;
+     }
+ }
+      </script>
+    
+</body>
+</html>
